@@ -1,0 +1,119 @@
+.skills-body {
+  background: linear-gradient(
+    128.94deg,
+    #5988ff -33.96%,
+    #5988ff 36.71%,
+    #0043f0 112.25%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-family: "Baloo";
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    color: white;
+    font-size: 64px;
+
+    @media (max-width: 450px) {
+      margin-bottom: 72px;
+    }
+  }
+
+  .outer-contain {
+    display: flex;
+    // margin-top: 64px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+  }
+
+  .whole-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 665px;
+
+    .skill-contain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 130px;
+      min-height: 150px;
+      border-radius: 6px;
+
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    .skill1 {
+      animation: slideInLeft 0.35s ease-in-out;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    .skill2 {
+      animation: slideInLeft 0.65s ease-in-out;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    .skill3 {
+      animation: slideInLeft 0.95s ease-in-out;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        transform: translateX(-1400px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .skill1,
+    .skill2,
+    .skill3 {
+      animation: none !important;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-top: -100px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .skill {
+    position: absolute;
+    color: white;
+  }
+}
+
+@media (max-width: 430px) {
+  h2 {
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+  }
+}
+@media (max-width: 311px) {
+  h2 {
+    font-size: 50px !important;
+  }
+}

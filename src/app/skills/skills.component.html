@@ -1,0 +1,23 @@
+<div class="skills-body" id="skills">
+  <div class="outer-contain">
+    <h2>Skills set</h2>
+    <div class="whole-contain">
+      <div *ngFor="let item of logos; let i = index" #skillContain>
+        <div class="skill-contain skill-entry1 no-flick">
+          <div class="logo">
+            <img src="./assets/img/skill-logo/{{ logos[i] }}" alt="" />
+          </div>
+          <div class="skill">{{ skill[i] }}</div>
+        </div>
+      </div>
+      <div *ngFor="let item of logos2; let i = index" #skillContain2>
+        <div class="skill-contain skill-entry2 no-flick">
+          <div class="logo">
+            <img src="./assets/img/skill-logo/{{ logos2[i] }}" alt="" />
+          </div>
+          <div class="skill">{{ skill2[i] }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

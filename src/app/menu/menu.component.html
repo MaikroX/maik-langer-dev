@@ -1,0 +1,32 @@
+<header>
+  <div class="max-width-1000">
+    <a href="#home">
+      <img class="my-logo" src="./assets/img/mein-logo.png" alt=""
+    /></a>
+
+    <!-- <button class="language">DE</button> -->
+    <div class="allLinks">
+      <a href="#aboutMe">About me</a>
+      <a href="#skills">Skills set</a>
+      <a href="#work">My work</a>
+    </div>
+  </div>
+
+  <button
+    class="mat-button"
+    mat-icon-button
+    mat-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div class="mobile-menu">
+      <a href="#home">HOME</a>
+      <a href="#skills">MY SKILLS</a>
+      <a href="#work">MY WORK</a>
+      <a href="#aboutMe">ABOUT ME</a>
+    </div>
+  </mat-menu>
+</header>

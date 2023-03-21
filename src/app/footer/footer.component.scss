@@ -1,0 +1,50 @@
+.footer-body {
+  background: radial-gradient(
+    71.18% 335.57% at 28.82% -124.4%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+}
+
+.footer-inner {
+  display: flex;
+  min-height: 64px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: rgb(132, 132, 132);
+  flex-wrap: wrap;
+
+  @media (max-width: 315px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.inner-right {
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: white !important;
+  text-decoration: none;
+  width: 32px;
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+a:visited {
+  color: white !important;
+}
+
+@media (max-width: 425px) {
+  .footer-inner {
+    text-align: center;
+    flex-direction: column-reverse;
+    padding: 8px;
+  }
+}

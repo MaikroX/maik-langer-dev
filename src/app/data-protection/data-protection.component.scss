@@ -1,0 +1,41 @@
+body {
+}
+
+.data-protection-body {
+  background: linear-gradient(179deg, #ffffff 12.89%, #d5e1fc 91.39%);
+  background-image: url("/assets/img/bg-elipses/ellipsehead.png");
+  background-size: 250px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.contain {
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    color: var(--akzent2);
+  }
+}
+
+.index-link {
+  color: white;
+}

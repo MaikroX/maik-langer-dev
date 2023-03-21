@@ -1,0 +1,27 @@
+.contain {
+  background: linear-gradient(179deg, #ffffff 12.89%, #d5e1fc 91.39%);
+  background-image: url("/assets/img/bg-elipses/ellipsehead.png");
+  background-size: 450px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Baloo";
+  flex-direction: column;
+  text-align: center;
+  color: black;
+
+  h1 {
+    font-family: "Baloo";
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 985px) {
+  .contain {
+    color: white;
+    background-size: 550px;
+  }
+}

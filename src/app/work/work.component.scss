@@ -1,0 +1,286 @@
+#work {
+  background: #f5f5f5;
+}
+
+h2 {
+  font-family: "Baloo" !important;
+  display: flex;
+  justify-content: center;
+  padding: 80px !important;
+  padding-bottom: 56px !important;
+  font-size: 64px !important;
+
+  color: var(--headcolor);
+  cursor: default;
+}
+
+h3 {
+  color: var(--headcolor);
+}
+
+.button {
+  width: 128px;
+  height: 64px;
+  left: 125px;
+  top: 481px;
+  color: white;
+  background-color: #2dfcd900;
+  border: 2px solid var(--headcolor);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.all-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.whole-work-contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .outer-contain {
+    max-width: 809px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: default;
+    padding-bottom: 64px;
+  }
+
+  .work-contain {
+    margin: 16px;
+  }
+
+  img {
+    width: 380px;
+    border-radius: 4px;
+  }
+
+  .project-name {
+    font-family: "Baloo";
+    color: var(--headcolor);
+    font-size: 24px;
+  }
+
+  .project-lang {
+    color: var(--headcolor);
+    font-size: 16px;
+  }
+}
+
+.works {
+  display: flex;
+  justify-content: space-evenly;
+  width: 800px;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.with-hover {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  top: 0;
+  opacity: 1;
+  text-align: center;
+
+  span {
+    margin: 12px;
+    margin-bottom: 4px !important;
+  }
+
+  :last-child {
+    cursor: pointer;
+    &:hover {
+      color: var(--headcolor-hover) !important;
+    }
+  }
+}
+
+button {
+  margin-top: 0px !important;
+  width: 80px;
+  height: 35px;
+  left: 125px;
+  top: 481px;
+  color: var(--headcolor);
+  background-color: #2dfcd900;
+  border: 2px solid --var(--headcolor);
+  cursor: pointer;
+  font-family: "Monteserat" !important;
+
+  &:hover {
+    transition: border 0.6s;
+    border: 2px solid var(--headcolor-hover);
+
+    color: white !important;
+  }
+}
+
+.button-position {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.close:hover,
+.close:focus {
+  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 20em 0 0 0 var(--hover);
+  cursor: pointer;
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+$colors: (
+  slide: #5988ff,
+);
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 0deg)};
+  }
+}
+
+.slide {
+  float: right;
+  width: 120px;
+  height: 50px;
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: white !important;
+  }
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em 0em 0.5em 0.5em;
+}
+
+.try-out {
+  margin-bottom: 0px;
+  margin-top: 24px !important;
+  border-radius: 4px;
+  margin-left: 0px !important;
+  width: 100px;
+}
+
+.work-contain:nth-child(even) .works {
+  flex-direction: row-reverse !important;
+}
+
+@media (max-width: 810px) {
+  .works {
+    flex-direction: column !important;
+    align-items: center !important;
+
+    padding-bottom: 24px;
+    width: auto;
+    background: white;
+  }
+  .work-contain:nth-child(even) .works {
+    flex-direction: column !important;
+    // background: #f5f5f5;
+    background: white;
+
+    padding-bottom: 24x;
+  }
+
+  .with-hover {
+    margin-top: 8px !important;
+  }
+
+  .try-out {
+    margin-top: 16px !important;
+    border-radius: 2px !important;
+  }
+
+  .whole-work-contain .work-contain {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 430px) {
+  h2 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .with-hover {
+    width: 290px;
+  }
+
+  .no-hover {
+    padding-top: 10px;
+  }
+
+  .whole-work-contain img {
+    width: 270px;
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 311px) {
+  h2 {
+    font-size: 50px !important;
+  }
+}

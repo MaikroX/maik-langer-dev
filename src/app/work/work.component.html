@@ -1,0 +1,38 @@
+<div class="work-body" id="work">
+  <div class="outer-contain">
+    <h2>My work</h2>
+    <div class="all-buttons">
+      <button class="button slide first-button" (click)="allProjectsLoad()">
+        All</button
+      ><button class="button slide" (click)="angularProjectsLoad()">
+        Angular</button
+      ><button class="button slide" (click)="javaScriptProjectsLoad()">
+        JavaScript
+      </button>
+    </div>
+
+    <div class="whole-work-contain">
+      <div class="d-flex outer-contain">
+        <div
+          class="work-contain"
+          *ngFor="let item of workImages; let i = index"
+        >
+          <div class="works">
+            <div class="no-hover">
+              <img src="./assets/img/previews/{{ workImages[i] }} " alt="" />
+            </div>
+            <div class="with-hover">
+              <span class="project-name">{{ projects[i] }}</span>
+              <span class="project-lang">{{ language[i] }}</span>
+              <span class="padding-info">{{ hoverInfo[i] }}</span>
+
+              <a target="#" href="{{ projektLink[i] }}">
+                <button class="try-out">Live Test</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
