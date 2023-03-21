@@ -68,10 +68,11 @@ export class WorkComponent implements OnInit {
   projektLinks() {
     this.projektLink = [
       '#',
-      'https://maik-langer.developerakademie.net/JOIN-Maik/Join/login.html',
-      'https://maik-langer.developerakademie.net/El%20Pollo%20Loco/index.html',
-      'https://maik-langer.developerakademie.net/Pokedex/index.html',
+      'https://maik-langer-dev.de/projects/JOIN/Join/login.html',
+      'https://maik-langer-dev.de/projects/PolloLoco/index.html',
+      'https://maik-langer-dev.de/projects/Pokedex/index.html',
       'https://maik-langer.developerakademie.net/ringoffire/index.html',
+      // 'https://maik-langer-dev.de/projects/ringoffire/',
     ];
   }
 
